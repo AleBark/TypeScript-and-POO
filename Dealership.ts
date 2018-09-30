@@ -1,6 +1,7 @@
 import Vehicle from "./Vehicle";
+import DealershipInterface from "./DealershipInterface";
 
-export default class Dealership {
+export default class Dealership implements DealershipInterface {
 
     private address: string
     private vehicleList: Array<Vehicle>
