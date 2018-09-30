@@ -1,20 +1,24 @@
-import Car from "./Car"
+import Vehicle from "./Vehicle";
 
 export default class Dealership {
 
     private address: string
-    private carList: Array<Car>
+    private vehicleList: Array<Vehicle>
 
-    constructor(address:string, carList: Array<Car>){
+    constructor(address:string, vehicleList: Array<Vehicle>){
         this.address = address
-        this.carList = carList
+        this.vehicleList = vehicleList
+    }
+
+    setAddress(address: string):void{
+        this.address = address
     }
 
     getAddress(): string{ 
         return this.address
     }
 
-    getCarList() : Array<Car>{
-        return this.carList
+    getVehicleList() : Array<Vehicle>{
+        return this.vehicleList
     }
 }

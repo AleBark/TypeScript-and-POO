@@ -1,20 +1,28 @@
 import Car from './Car'
+import Motorcycle from './Motorcycle'
 import Person from './Person'
 import Dealership from './Dealership'
+import Vehicle from './Vehicle';
 
 
-let hatchCar = new Car('Hatch', 2)
-let sportCar = new Car('Sport',2)
-let carList: Array<Car> = [hatchCar, sportCar]
-let dealership = new Dealership('Rua Canelas', carList)
-let person = new Person('Joe', 'Hatch')
+let hatchCar = new Car('Hatch',4,2 )
+let sportCar = new Car('Sport',4,2)
+let motoCross = new Motorcycle('Motocross',2)
+
+let vehicleList: Array<Vehicle> = [hatchCar, sportCar, motoCross]
+let dealership = new Dealership('Rua Canelas', vehicleList)
+let person = new Person('Joe', 'Motocross')
 
 
-dealership.getCarList().map((car:Car) => {
+dealership.getVehicleList().map((vehicle:Vehicle) => {
     
-    if(car['model'] == person.getFavoriteCar()){
-        person.setCar(car)
+    if(vehicle['model'] == person.getFavoriteVehicle()){
+        person.setVehicle(vehicle)
     }
 })
 
-console.log(person.getCar())
+let personFavoriteVehicle = person.getVehicle()
+
+console.log(personFavoriteVehicle)
+personFavoriteVehicle.speedUp()
+console.log(personFavoriteVehicle.getSpeed())

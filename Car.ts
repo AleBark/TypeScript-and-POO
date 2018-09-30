@@ -1,28 +1,18 @@
-export default class Car {
+import Vehicle from "./Vehicle";
 
-    private model:string
-    private portNumber: number
-    private speed: number
+export default class Car extends Vehicle {
 
-    constructor(model:string, portNumber: number){
-        this.model = model
-        this.portNumber = portNumber
-        this.speed = 0
+    private ports: number
+
+    constructor(model: string, wheels: number, ports: number) {
+        super(model,wheels)
+        this.ports = ports
+    }
+    public getPorts(): number {
+        return this.ports
     }
 
-    public getPortNumber(): number{
-        return this.portNumber
-    }
-
-    public speedUp(): void{
-        this.speed = this.speed + 10
-    }
-
-    public stop(): void{
-        this.speed = 0
-    }
-
-    public getSpeed(): number{
-        return this.speed
+    public setPorts(ports:number): void {
+        this.ports = ports
     }
 }

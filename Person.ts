@@ -1,29 +1,30 @@
 import Car from "./Car"
+import Vehicle from "./Vehicle";
 
 export default class Person {
 
     private name:string
-    private favoriteCar: string
-    private car!: Car
+    private favoriteVehicle: string
+    private vehicle!: Vehicle
 
-    constructor(name: string, favoriteCar: string) {
+    constructor(name: string, favoriteVehicle: string) {
         this.name = name
-        this.favoriteCar = favoriteCar
+        this.favoriteVehicle = favoriteVehicle
     }
 
     public getName():string{
         return this.name
     }
 
-    public getFavoriteCar(): string {
-        return this.favoriteCar
+    public getFavoriteVehicle(): string {
+        return this.favoriteVehicle
     }
 
-    public setCar(car: Car): void {
-        this.car = car
+    public setVehicle(vehicle: Vehicle): void {
+        this.vehicle = vehicle
     }
 
-    public getCar(): Car{
-        return this.car
+    public getVehicle(): Vehicle{
+        return this.vehicle
     }
 }
