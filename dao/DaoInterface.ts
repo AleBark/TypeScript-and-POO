@@ -1,14 +1,14 @@
-export default interface DaoInterface {
+export default interface DaoInterface<T> {
 
     tableName: string
 
-    insert(object: any): boolean
+    insert(object: T): boolean
 
-    update(object: any): boolean
+    update(object: T): boolean
 
-    delete(id: number): any
+    delete(id: number): T
 
-    get(id: number): any
+    get(id: number): T
 
-    getAll(): [any]
+    getAll(): [T]
 }
