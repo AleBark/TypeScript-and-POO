@@ -1,21 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Person = /** @class */ (function () {
-    function Person(name, favoriteCar) {
+    function Person(name, favoriteVehicle) {
         this.name = name;
-        this.favoriteCar = favoriteCar;
+        this.favoriteVehicle = favoriteVehicle;
     }
     Person.prototype.getName = function () {
         return this.name;
     };
-    Person.prototype.getFavoriteCar = function () {
-        return this.favoriteCar;
+    Person.prototype.getFavoriteVehicle = function () {
+        return this.favoriteVehicle;
     };
-    Person.prototype.setCar = function (car) {
-        this.car = car;
+    Person.prototype.setVehicle = function (vehicle) {
+        this.vehicle = vehicle;
     };
-    Person.prototype.getCar = function () {
-        return this.car;
+    Person.prototype.getVehicle = function () {
+        return this.vehicle;
     };
     return Person;
 }());
