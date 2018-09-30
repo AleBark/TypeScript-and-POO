@@ -16,6 +16,9 @@ var Motorcycle = /** @class */ (function (_super) {
     function Motorcycle(model, wheels) {
         return _super.call(this, model, wheels) || this;
     }
+    Motorcycle.prototype.speedUp = function () {
+        this.speed = this.speed + 15;
+    };
     return Motorcycle;
 }(Vehicle_1.default));
 exports.default = Motorcycle;

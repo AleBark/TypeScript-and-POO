@@ -6,6 +6,9 @@ var Vehicle = /** @class */ (function () {
         this.speed = 0;
         this.wheels = wheels;
     }
+    Vehicle.prototype.getModel = function () {
+        return this.model;
+    };
     Vehicle.prototype.getWheels = function () {
         return this.wheels;
     };
